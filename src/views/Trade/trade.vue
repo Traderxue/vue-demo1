@@ -58,6 +58,7 @@ const goTab = (item) => {
   height: 100vh;
   background: #13161d;
   padding: 15px;
+  box-sizing: border-box;
   .header {
     width: auto;
     height: 25px;

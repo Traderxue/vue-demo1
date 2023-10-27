@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import {useRouter} from "vue-router"
+
+const router  = useRouter()
 
 const listData = ref([
     {
@@ -31,6 +34,10 @@ const listData = ref([
         up:0
     }
 ])
+
+const goChart = ()=>{
+  router.push('/chart')
+}
 </script>
 
 <template>
@@ -100,7 +107,7 @@ const listData = ref([
     </div>
     <div class="main">
         <span>涨幅榜</span>
-        <div class="box" v-for="(item,index) in listData" :key="index">
+        <div class="box" v-for="(item,index) in listData" :key="index" @click="goChart">
             <div>
                 <span>{{item.type}}/USDT</span>
                 <p>24H量{{item.volume}}</p>

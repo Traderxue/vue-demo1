@@ -28,7 +28,7 @@ const value = ref(1);
             <option value="200x">200x</option>
           </select>
         </div>
-        <van-stepper v-model="value" integer min="0" max="200000" step="10" />
+        <van-stepper v-model="value" integer min="0" max="2000000" step="1000" />
         <p class="canuse">可用额度 0.000USDT</p>
         <button class="buybtc">买入BTC</button>
       </div>
@@ -74,6 +74,7 @@ const value = ref(1);
   height: 100vh;
   background: #13161d;
   padding: 15px;
+  box-sizing: border-box;
   .header {
     width: auto;
     height: 50px;

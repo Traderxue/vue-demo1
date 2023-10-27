@@ -78,6 +78,7 @@ const tabChange = (item) => {
   width: auto;
   height: 100vh;
   padding: 15px;
+  box-sizing: border-box;
   .header {
     text-align: center;
     color: #ccc;
