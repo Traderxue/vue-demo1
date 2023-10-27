@@ -1,8 +1,16 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter()
 
 const value = ref(1);
+
+const candleStick = ()=>{
+  router.push('/chart')
+}
 </script>
+
 <template>
   <div class="contract">
     <div class="header">
@@ -10,7 +18,7 @@ const value = ref(1);
         >BTC/USDT
         <p>0.05%</p></span
       >
-      <span class="material-symbols-outlined candlestick_chart">
+      <span class="material-symbols-outlined candlestick_chart" @click="candleStick">
         candlestick_chart
       </span>
     </div>
