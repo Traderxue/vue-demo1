@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from "vue";
 
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+
+
 const listData = ref([
   {
     type: "APE",
@@ -17,12 +22,16 @@ const listData = ref([
     up: 0,
   },
 ]);
+
+const goChart = ()=>{
+  router.push("/chart")
+}
 </script>
 
 
 <template>
   <div class="optional">
-    <div class="box" v-for="(item, index) in listData" :key="index">
+    <div class="box" v-for="(item, index) in listData" :key="index" @click="goChart">
       <div>
         <span
           >{{ item.type }}
