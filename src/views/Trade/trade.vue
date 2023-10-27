@@ -47,7 +47,7 @@ const goTab = (item) => {
       >
     </div>
     <div class="main">
-      <RouterView />
+      <RouterView class="main_box"/>
     </div>
   </div>
 </template>
@@ -90,5 +90,10 @@ const goTab = (item) => {
       font-weight: 600;
     }
   }
+}
+.main_box{
+  background: #1a212a;
+  margin: -15px;
+  padding: 15px;
 }
 </style>

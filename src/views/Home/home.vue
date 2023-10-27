@@ -36,7 +36,8 @@ const listData = ref([
 <template>
   <div class="home">
     <div class="title">
-      <img src="@/assets/img/logo1.png" alt="" />
+      <!-- <img src="@/assets/img/logo1.png" alt="" /> -->
+      <span>Bizzan.com</span>
       <span class="material-symbols-outlined"> sms </span>
     </div>
     <div class="banner">
@@ -124,6 +125,10 @@ p{
     display: flex;
     justify-content: space-between;
     color: #fff;
+    span{
+      font-weight: 600;
+      line-height: 25px;
+    }
     img {
       width: auto;
       height: 25px;

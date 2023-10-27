@@ -47,7 +47,29 @@ const router = createRouter({
         },
         {
           path: "/mine",
-          component: () => import("@/views/Mine/mine.vue")
+          component: () => import("@/views/Mine/mine.vue"),
+          children:[
+            {
+              path:"",
+              component:()=>import("@/views/Mine/components/coin.vue")
+            },
+            {
+              path:"/cb",
+              component:()=>import("@/views/Mine/components/chongbi.vue")
+            },
+            {
+              path:"/coin",
+              component:()=>import("@/views/Mine/components/coin.vue")
+            },
+            {
+              path:"/con",
+              component:()=>import("@/views/Mine/components/contract_mine.vue")
+            },
+            {
+              path:"/fb",
+              component:()=>import("@/views/Mine/components/fabi.vue")
+            }
+          ]
         }
       ]
     },
